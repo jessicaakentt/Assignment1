@@ -7,18 +7,8 @@
 
 #include "CrazyRandomSword.h"
 
-CrazyRandomSword::CrazyRandomSword()
-{
-	int randomNumber = rand() % 94 + 7; //generate random number between 7-100
-	double random = randomNumber + 0.0;
-	
-	//call Weapon constructor
-	Weapon("Crazy random sword", random);
-	
-}
-
 double CrazyRandomSword::hit(double armor) { //ignore a random number of points
-	int randomNumber = rand()%(armor*.3333) + 2;
+	int randomNumber = Random::get(2, armor*0.3333);
 	
     double damage = hitpoints - randomNumber;
  
