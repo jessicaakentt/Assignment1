@@ -18,9 +18,8 @@
 class CrazyRandomSword : public Weapon {
 public:
 
-    CrazyRandomSword() { //Calls Weapon(name, hitpoints) constructor 
-    }
-
+    CrazyRandomSword();
+	
     virtual ~CrazyRandomSword() {};
 
     virtual double hit(double armor);
