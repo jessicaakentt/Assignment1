@@ -76,3 +76,9 @@ Assignment 1. Part 3E.
 	
 		
 *Reference for C, F, and G:	https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History	
+
+Assignment1 Part5
+The RoleGame prototype is using both polymorphism and encapsulation. An example of polymorphism
+in this RoleGame is when the weapons, such as CommonSpear inherit from class Weapon. An example of
+encapsulation in this RoleGame is the WeaponFactory - the main program uses the WeaponFactory to "get"
+instances of the classes, hiding some of the back-end rather than directly interacting with the weapon classes.
