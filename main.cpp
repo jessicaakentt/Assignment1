@@ -38,6 +38,21 @@ int main(int argc, char** argv) {
     weapon = WeaponFactory::getInstance()->getWeapon("spear");
     simulateWeapon(weapon, armor);
     delete(weapon);
+	
+	//new hammer
+    weapon = WeaponFactory::getInstance()->getWeapon("hammer");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+
+	//new crazy random sword
+    weapon = WeaponFactory::getInstance()->getWeapon("random");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+
+	//new javelin
+    weapon = WeaponFactory::getInstance()->getWeapon("javelin");
+    simulateWeapon(weapon, armor);
+    delete(weapon);	
 
     return 0;
 }
