@@ -1,0 +1,78 @@
+Assignment 1. Part 3E.
+
+(a) Console Output from step 3C:
+	Enumerating objects: 11, done.
+	Counting objects: 100% (10/10), done.
+	Delta compression using up to 8 threads
+	Compressing objects: 100% (5/5), done.
+	Writing objects: 100% (7/7), 857 bytes | 285.00 KiB/s, done.
+	Total 7 (delta 2), reused 0 (delta 0)
+	remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+	To github.com:jessicaakentt/Assignment1.git
+		3d373c9..606bb81  master -> master
+		
+(b) Number of commits:
+	There are currently 5 commits to the repository - 3 by me; 2 by Javier.
+	I used the git command "git log" and used the "Enter" key to go through the log
+		and count the number of commits. I then used "q" to exit the long when I reached
+		the end.
+		
+(c) .gitignore inspection:
+	Date:   Thu Jan 10 16:45:38 2019 -0500
+		is timestamp showing that the file was last modified January 10th at 16:45.
+	git log --stat -- .gitignore
+		is the command I used. It showed the commit associated with the last modification of the file.
+		
+(d)	Reasons branches are used:
+		1. Branching is used to enable developers to "switch" back and forth between work. For example,
+			if you are working on an issue, it is a good idea to create a branch to fix that issue and 
+			merge it later once the issue is resolved.
+		2. Branching is also beneficial for multi-developer projects. It allows users to add/modify pieces 
+			of a large project at the same time without causing issues, such as overwriting another
+			developer's code.
+		*Reference: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+		
+(e) Difference between git log and git status
+	The git log lists all of the commits made to a repository, with details of each commit.
+	Git status gives a snapshot on the current state of the repository, including information 
+		on branching, commits, and the working tree. For example, my current git status is that
+		my branch is up to date, there is nothing to commit, and my working tree is clean.
+
+(f) Command to inspect commits for Weapon.h:
+	git log -- Weapons.h
+	I tested this with "git log -- README.md" to show the commits for only that file.
+	
+(g) Command to see commits containing the word "file":
+	git log --grep "file"
+	
+(h) Object-Oriented Questions:
+		1. What is inheritance? Inheritance is the relationship between base class and derived class.
+			It is referred to as an "is a" relationship. For example, a square is a geometric object. In this
+			scenario, a base class called "Geometric Object" could store the basic function of all geometric
+			objects, such as Draw() and a square object would inherit from class geometric object.
+		2. What is polymorphism? Polymorphism with inheritance allows us to program "in general." Classes such
+			as "BMW", "Subaru", "Volkwagen" all take on qualities of class "Car". An example I think of is 
+			template classes. When using vectors, we must identify whether we want vector<int>, vector<double>, etc.
+			The compiler then creates instations of these objects individually.
+		3. What is encapsulation? Encapsulation is simply a bundling of data. It is used to "hide" certain methods
+			or variables that could be affected by unauthorized parties. 
+
+(i) Difference between workflows:
+	Integration management workflow involves each developer making changes/pushes to his/her own 
+	public repository with pulls from the central repository; the integration manager is then responsible 
+	for integration conflict resolutions. 
+	The Dictator and Lieutenants workflow consists of distributed development and integration. Like the
+	integration management workflow, there is one central repository and everyone pulls from that repository,
+	but only the dictator can push to it. In this method, there are more people resolving conflicts. The dictator
+	merges changes in the lieutenant repositories and the lieutenants then merge changes for some developers and
+	solve conflicts. 
+	In other words, the Dictator and Lieutenant workflow allows for more division of responsibilities.
+
+(j) Benefit of "Dictator and Lieutenants" workflow:	
+	In a large team of 100 developers, it would be beneficial to follow the Dictator and Lieutenant Worflow
+	because there is a geater division of responsibilities. In a centralized workflow, one person is responsible
+	for all changes/merges in a repository, which may be difficult to handle. In the Dictator and Lieutenant method,
+	there is a series of checks, making it easier to consolidate a project and catch mistakes/resolve conflicts.
+	
+		
+*Reference for C, F, and G:	https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History	
